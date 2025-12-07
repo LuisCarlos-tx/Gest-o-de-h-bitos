@@ -1,9 +1,9 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class GestaoSimples {
+public class gestao {
 
-    private static Gerenciador gerenciador = new Gerenciador();
+    private static gerenciador gerenciador = new gerenciador();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -16,10 +16,9 @@ public class GestaoSimples {
             return;
         }
 
-        List<Item> lista = gerenciador.listarItens();
+        List<item> lista = gerenciador.listarItens();
         System.out.println("\n--- 📋 SUAS METAS E HÁBITOS ---");
         for (int i = 0; i < lista.size(); i++) {
-            // Imprime o índice + 1 para o usuário
             System.out.println("[" + (i + 1) + "] " + lista.get(i));
         }
         System.out.println("-----------------------------------");
@@ -37,12 +36,10 @@ public class GestaoSimples {
             int indice = Integer.parseInt(scanner.nextLine());
             
             if (gerenciador.marcarConcluido(indice)) {
-                // Se a marcação foi bem-sucedida, pega a descrição para feedback
-                // Nota: Em um sistema mais robusto, o Gerenciador retornaria o item.
-                // Aqui, vamos apenas dar o feedback de sucesso.
+              
                 System.out.println("\n🎉 Item " + indice + " marcado como CONCLUÍDO!");
             } else {
-                // O método retorna false se o índice for inválido ou se já estiver concluído
+                
                 System.out.println("\n❌ Não foi possível marcar o item. Verifique o número digitado ou se ele já está concluído.");
             }
         } catch (NumberFormatException e) {
