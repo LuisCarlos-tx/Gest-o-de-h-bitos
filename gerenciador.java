@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Gerenciador {
+public class gerenciador {
     private List<Item> gestao;
 
-    public Gerenciador() {
+    public gerenciador() {
         this.gestao = new ArrayList<>();
     }
 
-    public void adicionarItem(String tipo, String descricao) {
-        Item novoItem = new Item(tipo, descricao);
+    public void adicionaritem(String tipo, String descricao) {
+        Item novoitem = new item(tipo, descricao);
         gestao.add(novoItem);
         System.out.println("\n✅ " + tipo + " '" + descricao + "' adicionado com sucesso!");
     }
@@ -18,7 +18,7 @@ public class Gerenciador {
         return gestao.isEmpty();
     }
 
-    public List<Item> listarItens() {
+    public List<item> listaritens() {
         return gestao;
     }
 
