@@ -1,10 +1,10 @@
-public class Item {
+public class item {
     private String tipo;      
     private String descricao;
     private boolean concluido;
 
   
-    public Item(String tipo, String descricao) {
+    public item(String tipo, String descricao) {
         this.tipo = tipo;
         this.descricao = descricao;
         this.concluido = false;
